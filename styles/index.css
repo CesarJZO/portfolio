@@ -16,19 +16,40 @@ body {
     "footer";
 }
 
+main {
+  grid-area: main;
+}
+
 .logo {
   width: 32px;
   filter: invert();
 }
 
-main {
-  grid-area: main;
+.bar {
+  padding: 16px 0;
 }
 
-.top-bar {
+.top {
   grid-area: header;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.bottom-bar {
+.bottom {
   grid-area: footer;
+}
+
+.links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  gap: 16px;
+}
+
+nav > .links-list {
+  justify-content: center;
 }
