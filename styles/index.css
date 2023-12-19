@@ -60,9 +60,10 @@ main {
 }
 
 .level-card {
+  margin: 16px 0;
   width: 100%;
   display: grid;
-
+  gap: 8px;
   grid-template-columns: auto 1fr;
   align-items: center;
 }
