@@ -19,6 +19,10 @@
   width: 100%;
 }
 
+.profile-picture:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
 .roles {
   width: 512px;
   justify-content: center;
