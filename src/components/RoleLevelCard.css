@@ -1,0 +1,47 @@
+#role-level-card {
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  grid-template-areas:
+    "icon title points"
+    "level bar bar";
+}
+
+.role-icon {
+  grid-area: icon;
+  width: 32px;
+  filter: invert();
+}
+
+.exp-title {
+  grid-area: title;
+}
+
+.exp-points {
+  grid-area: points;
+  color: #bf65f3;
+}
+
+.exp-level {
+  grid-area: level;
+  justify-self: center;
+}
+
+/* todo: move this to its own component */
+.progress-bar {
+  grid-area: bar;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.progress-fill {
+  border-radius: 16px;
+  height: 16px;
+  width: 69%;
+  background-color: #bf65f3;
+}
+
+
