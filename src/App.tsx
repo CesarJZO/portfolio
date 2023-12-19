@@ -1,6 +1,7 @@
 import "./App.css";
 
 import RoleLevelCard from "./components/RoleLevelCard";
+import BottomBar from "./components/BottomBar";
 
 function App() {
   return (
@@ -22,7 +23,13 @@ function App() {
           iconPath="src/assets/hardware-chip-outline.svg"
         />
       </main>
-      <footer></footer>
+      
+      <BottomBar links={[
+        { name: "Projects", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: "Tutorials", path: "/tutorials" },
+        { name: "Courses", path: "/courses" },
+      ]} />
     </>
   );
 }

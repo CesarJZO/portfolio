@@ -12,6 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  min-height: 100vh;
+
+  display: grid;
+  align-items: center;
+
+  grid-template-rows: auto 1fr auto;
+}
+
 * {
   margin: 0;
 }

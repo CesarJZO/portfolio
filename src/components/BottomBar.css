@@ -1,0 +1,11 @@
+.bottom-bar {
+  padding: 16px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: inherit;
+  gap: 16px;
+}
