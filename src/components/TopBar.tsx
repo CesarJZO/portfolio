@@ -1,13 +1,13 @@
 import "./TopBar.css";
 
-function TopBar(props: TopBarProps) {
+function TopBar({ socialLinks }: TopBarProps) {
   return (
     <header className="top-bar">
       <h2>Portfolio</h2>
       <address className="social-media">
-        {props.socialLinks.map((socialLink) => (
-          <a key={socialLink.site} href={socialLink.link}>
-            <img className="logo" src={socialLink.iconPath} alt="GitHub logo" />
+        {socialLinks.map(({site, icon, link}) => (
+          <a key={site} href={link}>
+            <img className="logo" src={icon} alt="GitHub logo" />
           </a>
         ))}
       </address>
@@ -16,7 +16,7 @@ function TopBar(props: TopBarProps) {
 }
 
 interface TopBarProps {
-  socialLinks: { site: string; iconPath: string; link: string }[];
+  socialLinks: { site: string; icon: string; link: string }[];
 }
 
 export default TopBar;

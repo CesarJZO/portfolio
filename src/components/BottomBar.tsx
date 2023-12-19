@@ -11,17 +11,17 @@ import "./BottomBar.css";
  *   { name: "About", path: "/about" },
  * ]} />
  *
- * @param props.navItems The navigation items, each item has a name and a path
+ * @param links The navigation items, each item has a name and a path
  * @returns The bottom bar component
  */
-function BottomBar(props: BottomBarProps) {
+function BottomBar({ links }: BottomBarProps) {
   return (
     <footer className="bottom-bar">
       <nav className="nav-links">
-        {props.links.map((navItem, index, arr) => (
+        {links.map((navItem, index, array) => (
           <Fragment key={navItem.name}>
             <a href={navItem.path}>{navItem.name}</a>
-            {index < arr.length - 1 && <span> • </span>}
+            {index < array.length - 1 && <span> • </span>}
           </Fragment>
         ))}
       </nav>
@@ -30,6 +30,9 @@ function BottomBar(props: BottomBarProps) {
 }
 
 interface BottomBarProps {
+  /**
+   * The navigation items, each item has a name and a path
+   */
   links: {
     /**
      * The name of the navigation item
