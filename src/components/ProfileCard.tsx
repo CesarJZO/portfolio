@@ -34,7 +34,7 @@ function ProfileCard(props: ProfileCardProps) {
       <Divider />
       <section className="roles">
         {roles.map((role) => (
-          <RoleLevelCard {...role} />
+          <RoleLevelCard key={role.role} {...role} />
         ))}
       </section>
     </article>
