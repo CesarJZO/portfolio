@@ -1,8 +1,8 @@
 import "./App.css";
 
-import RoleLevelCard from "./components/RoleLevelCard";
 import TopBar from "./components/TopBar";
 import BottomBar from "./components/BottomBar";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
@@ -26,27 +26,11 @@ function App() {
           },
         ]}
       />
+      
       <main>
-        <RoleLevelCard
-          role="Frontend Developer"
-          level={2}
-          xp={100}
-          progress={50}
-          iconPath="src/assets/game-controller-outline.svg"
-        />
-        <RoleLevelCard
-          role="Backend Developer"
-          level={1}
-          xp={50}
-          progress={25}
-          iconPath="src/assets/hardware-chip-outline.svg"
-        />
-        <RoleLevelCard
-          role="Fullstack Developer"
-          level={1}
-          xp={50}
-          progress={25}
-          iconPath="src/assets/cloud-outline.svg"
+        <ProfileCard
+          name="César Zárate"
+          picturePath="src/assets/pp-no-bg.png"
         />
       </main>
 
