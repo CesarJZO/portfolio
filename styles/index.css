@@ -64,30 +64,50 @@ main {
   width: 100%;
   display: grid;
   gap: 8px;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  grid-template-areas:
+    "icon title points"
+    "level bar bar";
+}
+
+.exp-icon {
+  grid-area: icon;
+}
+
+.exp-level {
+  grid-area: level;
+  justify-self: center;
+}
+
+.exp-title {
+  grid-area: title;
 }
 
 .progress-bar {
+  grid-area: bar;
   border-radius: 16px;
   overflow: hidden;
-  background-color: #ffffff;
-  grid-column: span 2;
-  grid-column: 2 / -1;
+  background-color: #ccc;
 }
 
 .progress-fill {
   border-radius: 16px;
   height: 16px;
-  width: 50%;
+  width: 69%;
   background-color: #bf65f3;
+}
+
+.exp-points {
+  grid-area: points;
+  color: #bf65f3;
 }
 
 .profile-summary > img {
   width: 100%;
 }
 
-.logo {
+.logo, .exp-icon {
   width: 32px;
   filter: invert();
 }
