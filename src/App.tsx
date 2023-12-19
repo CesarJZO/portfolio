@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+
+import RoleLevelCard from "./components/RoleLevelCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>My portfolio</header>
+      <main>
+        <RoleLevelCard
+          role="Frontend Developer"
+          level={2}
+          xp={100}
+          progress={50}
+          iconPath="src/assets/game-controller-outline.svg"
+        />
+        <RoleLevelCard
+          role="Backend Developer"
+          level={1}
+          xp={50}
+          progress={25}
+          iconPath="src/assets/hardware-chip-outline.svg"
+        />
+      </main>
+      <footer></footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
