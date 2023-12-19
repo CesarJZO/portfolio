@@ -17,7 +17,7 @@ import ProgressBar from "./ProgressBar";
  */
 function RoleLevelCard(props: RoleLevelCardProps) {
   return (
-    <section id="role-level-card">
+    <section className="role-level-card">
       <img className="role-icon" src={props.iconPath} alt="Role icon" />
 
       <strong className="exp-level">{props.level}</strong>
