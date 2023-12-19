@@ -1,0 +1,25 @@
+.profile-card {
+  display: flex;
+  gap: 16px;
+}
+
+.profile-card > section {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-summary {
+  width: 256px;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 100%;
+}
+
+.roles {
+  width: 512px;
+  justify-content: center;
+}
