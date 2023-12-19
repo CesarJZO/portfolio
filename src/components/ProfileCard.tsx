@@ -4,36 +4,12 @@ import Divider from "./Divider";
 import RoleLevelCard from "./RoleLevelCard";
 
 function ProfileCard(props: ProfileCardProps) {
-  const roles = [
-    {
-      role: "Frontend Developer",
-      level: 3,
-      xp: 100,
-      progress: 50,
-      iconPath: "src/assets/game-controller-outline.svg",
-    },
-    {
-      role: "Backend Developer",
-      level: 5,
-      xp: 50,
-      progress: 75,
-      iconPath: "src/assets/hardware-chip-outline.svg",
-    },
-    {
-      role: "Fullstack Developer",
-      level: 2,
-      xp: 50,
-      progress: 25,
-      iconPath: "src/assets/cloud-outline.svg",
-    },
-  ];
-
   return (
     <article className="profile-card">
       <Summary {...props} />
       <Divider />
       <section className="roles">
-        {roles.map((role) => (
+        {props.roles.map((role) => (
           <RoleLevelCard key={role.role} {...role} />
         ))}
       </section>
@@ -61,6 +37,13 @@ function Summary(props: ProfileCardProps) {
 interface ProfileCardProps {
   name: string;
   picturePath: string;
+  roles: {
+    role: string;
+    level: number;
+    xp: number;
+    progress: number;
+    iconPath: string;
+  }[];
 }
 
 export default ProfileCard;

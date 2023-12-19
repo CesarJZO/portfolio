@@ -26,11 +26,34 @@ function App() {
           },
         ]}
       />
-      
+
       <main>
         <ProfileCard
           name="César Zárate"
           picturePath="src/assets/pp-no-bg.png"
+          roles={[
+            {
+              role: "Frontend Developer",
+              level: 3,
+              xp: 100,
+              progress: 50,
+              iconPath: "src/assets/game-controller-outline.svg",
+            },
+            {
+              role: "Backend Developer",
+              level: 5,
+              xp: 50,
+              progress: 75,
+              iconPath: "src/assets/hardware-chip-outline.svg",
+            },
+            {
+              role: "Fullstack Developer",
+              level: 2,
+              xp: 50,
+              progress: 25,
+              iconPath: "src/assets/cloud-outline.svg",
+            },
+          ]}
         />
       </main>
 
