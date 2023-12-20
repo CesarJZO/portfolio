@@ -3,15 +3,27 @@ import "./ProfileCard.css";
 import Divider from "./Divider";
 import RoleLevelCard from "./RoleLevelCard";
 
+/**
+ * ProfileCard component
+ * 
+ * This component renders a card that displays the profile information and the roles of the user.
+ * 
+ * @param {string} name - The name of the user.
+ * @param {string} picture - The path to the profile picture of the user.
+ * @param {object[]} roles - The roles of the user.
+ * 
+ * @returns The ProfileCard component.
+ */
 function ProfileCard(props: ProfileCardProps) {
   const { roles } = props;
-  
+
   return (
     <article className="profile-card">
       <Summary {...props} />
       <Divider />
       <section className="roles">
-        {roles.map((role) => (
+        {roles.sort((a, b) => b.level - a.level)
+          .map((role) => (
           <RoleLevelCard key={role.role} {...role} />
         ))}
       </section>

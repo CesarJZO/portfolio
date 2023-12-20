@@ -26,7 +26,7 @@ function RoleLevelCard({ role, level, xp, progress, icon }: RoleLevelCardProps) 
 
       <ProgressBar progress={progress} />
 
-      <strong className="exp-points">{xp} XP</strong>
+      <strong className="exp-points">{xp.toLocaleString()} XP</strong>
     </section>
   );
 }

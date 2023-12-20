@@ -24,25 +24,25 @@ const socialLinks = [
 
 const roles = [
   {
-    role: "Frontend Developer",
-    level: 3,
-    xp: 100,
-    progress: 50,
+    role: "Game Developer",
+    level: 69,
+    xp: 2048,
+    progress: 84.5,
     icon: "src/assets/game-controller-outline.svg",
   },
   {
-    role: "Backend Developer",
-    level: 5,
-    xp: 50,
-    progress: 75,
-    icon: "src/assets/hardware-chip-outline.svg",
+    role: "Frontend Developer",
+    level: 26,
+    xp: 128,
+    progress: 29.1,
+    icon: "src/assets/cloud-outline.svg",
   },
   {
-    role: "Fullstack Developer",
+    role: "Desktop Developer",
     level: 2,
-    xp: 50,
-    progress: 25,
-    icon: "src/assets/cloud-outline.svg",
+    xp: 512,
+    progress: 53.9,
+    icon: "src/assets/hardware-chip-outline.svg",
   },
 ];
 
@@ -66,9 +66,7 @@ function App() {
         />
       </main>
 
-      <BottomBar
-        links={links}
-      />
+      <BottomBar links={links} />
     </>
   );
 }
