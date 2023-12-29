@@ -17,6 +17,7 @@
 
 .profile-picture {
   width: 100%;
+  transition: filter 0.5s ease-in-out;
 }
 
 .profile-picture:hover {

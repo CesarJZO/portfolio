@@ -7,6 +7,7 @@
 .progress-fill {
   border-radius: 16px;
   height: 16px;
-  width: 69%;
   background-color: #bf65f3;
+  width: 0;
+  transition: width 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
