@@ -1,0 +1,9 @@
+.article-form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-form textarea {
+  resize: none;
+  height: 12rem;
+}

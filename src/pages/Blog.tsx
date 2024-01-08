@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./Blog.css";
 import axios from "axios";
-import { articleApiUrl, articleUrl } from "../utils/endpoints";
+import { articleUrl } from "../utils/endpoints";
 import { useEffect, useState } from "react";
 
 const Blog = () => {
@@ -23,6 +23,7 @@ const Blog = () => {
   return (
     <main>
       <h1>Blog</h1>
+      <Link to="/form">Create Article</Link>
 
       <ul>
         {paths.map((path) => {
