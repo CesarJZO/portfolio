@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
 
 import "./Blog.css";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { articleUrl } from "../utils/endpoints";
 import { useEffect, useState } from "react";
 
+import { articleDto } from "../utils/dtos";
+
 const Blog = () => {
-  const [paths, setPaths] = useState([]);
+  const [articles, setArticles] = useState<articleDto[]>([]);
 
   useEffect(() => {
     axios
       .get(articleUrl)
-      .then((res) => {
-        const paths = res.data;
-        setPaths(paths);
+      .then((res: AxiosResponse<articleDto[]>) => {
+        const articles = res.data;
+
+        setArticles(articles);
       })
       .catch((error) => {
         console.error(error);
@@ -26,10 +29,10 @@ const Blog = () => {
       <Link to="/form">Create Article</Link>
 
       <ul>
-        {paths.map((path) => {
+        {articles.map((article) => {
           return (
-            <li key={path}>
-              <Link to={path}>{path}</Link>
+            <li key={article.path}>
+              <Link to={article.path}>{article.title}</Link>
             </li>
           );
         })}

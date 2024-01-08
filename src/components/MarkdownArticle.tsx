@@ -7,6 +7,8 @@ import {
 import { useColorScheme } from "../hooks";
 import { LegacyRef } from "react";
 
+import "./MarkdownArticle.css";
+
 const MarkdownArticle = ({ children }: MarkdownArticleProps) => {
   const colorScheme = useColorScheme();
 
