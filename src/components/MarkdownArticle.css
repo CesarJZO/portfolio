@@ -64,9 +64,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .markdown {
-    border: #e0e0e0 1px solid;
-  }
   .markdown h1 {
     border-bottom: 2px solid #e0e0e0;
   }
