@@ -1,0 +1,16 @@
+.bottom-bar {
+  padding: 16px 0;
+
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(
+    #00000000,
+    #00000064
+  );
+}
+
+.nav-links {
+  display: inherit;
+  gap: 16px;
+}
