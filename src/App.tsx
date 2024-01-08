@@ -1,8 +1,12 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import "./App.css";
 
 import TopBar from "./components/TopBar";
 import BottomBar from "./components/BottomBar";
-import ProfileCard from "./components/ProfileCard";
+
+import Landing from "./pages/Landing";
+import Blog from "./pages/Blog";
 
 const socialLinks = [
   {
@@ -22,30 +26,6 @@ const socialLinks = [
   },
 ];
 
-const roles = [
-  {
-    role: "Game Developer",
-    level: 69,
-    xp: 2048,
-    progress: 84.5,
-    icon: "/icons/game-controller-outline.svg",
-  },
-  {
-    role: "Frontend Developer",
-    level: 26,
-    xp: 128,
-    progress: 29.1,
-    icon: "/icons/cloud-outline.svg",
-  },
-  {
-    role: "Desktop Developer",
-    level: 2,
-    xp: 512,
-    progress: 53.9,
-    icon: "/icons/hardware-chip-outline.svg",
-  },
-];
-
 const links = [
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
@@ -55,19 +35,18 @@ const links = [
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <TopBar socialLinks={socialLinks} />
 
       <main>
-        <ProfileCard
-          name="César Zárate"
-          picture="/images/pp-no-bg.png"
-          roles={roles}
-        />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
       </main>
 
       <BottomBar links={links} />
-    </>
+    </BrowserRouter>
   );
 }
 
