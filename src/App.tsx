@@ -7,17 +7,17 @@ import ProfileCard from "./components/ProfileCard";
 const socialLinks = [
   {
     site: "GitHub",
-    icon: "src/assets/logo-github.svg",
+    icon: "/logos/logo-github.svg",
     link: "https://github.com/CesarJZO",
   },
   {
     site: "LinkedIn",
-    icon: "src/assets/logo-linkedin.svg",
+    icon: "/logos/logo-linkedin.svg",
     link: "https://www.linkedin.com/in/cesarjzo/",
   },
   {
     site: "Twitter",
-    icon: "src/assets/logo-twitter.svg",
+    icon: "/logos/logo-twitter.svg",
     link: "https://twitter.com/CesarJZO",
   },
 ];
@@ -28,21 +28,21 @@ const roles = [
     level: 69,
     xp: 2048,
     progress: 84.5,
-    icon: "src/assets/game-controller-outline.svg",
+    icon: "/icons/game-controller-outline.svg",
   },
   {
     role: "Frontend Developer",
     level: 26,
     xp: 128,
     progress: 29.1,
-    icon: "src/assets/cloud-outline.svg",
+    icon: "/icons/cloud-outline.svg",
   },
   {
     role: "Desktop Developer",
     level: 2,
     xp: 512,
     progress: 53.9,
-    icon: "src/assets/hardware-chip-outline.svg",
+    icon: "/icons/hardware-chip-outline.svg",
   },
 ];
 
@@ -61,7 +61,7 @@ function App() {
       <main>
         <ProfileCard
           name="César Zárate"
-          picture="src/assets/pp-no-bg.png"
+          picture="/images/pp-no-bg.png"
           roles={roles}
         />
       </main>
