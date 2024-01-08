@@ -3,6 +3,10 @@
   gap: 16px;
 }
 
+.profile-card * {
+  margin: 0;
+}
+
 .profile-card > section {
   display: flex;
   gap: 16px;

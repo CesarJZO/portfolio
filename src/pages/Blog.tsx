@@ -1,11 +1,11 @@
+import axios, { AxiosResponse } from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./Blog.css";
-import axios, { AxiosResponse } from "axios";
 import { articleUrl } from "../utils/endpoints";
-import { useEffect, useState } from "react";
-
 import { articleDto } from "../utils/dtos";
+
+import "./Blog.css";
 
 const Blog = () => {
   const [articles, setArticles] = useState<articleDto[]>([]);

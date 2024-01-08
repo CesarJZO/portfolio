@@ -1,10 +1,10 @@
 import axios from "axios";
+import { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { articleApiUrl } from "../utils/endpoints";
 
 import "./Form.css";
-import { FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const navigate = useNavigate();

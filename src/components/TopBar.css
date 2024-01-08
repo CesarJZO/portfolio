@@ -5,6 +5,10 @@
   justify-content: space-around;
 }
 
+.top-bar * {
+  margin: 0;
+}
+
 .social-media {
   display: flex;
   gap: 16px;
