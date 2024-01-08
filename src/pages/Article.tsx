@@ -10,10 +10,11 @@ const Article = () => {
   const { title } = useParams();
 
   useEffect(() => {
-    // fetch(`${articleUrl}/${title}`)
-    fetch("https://raw.githubusercontent.com/CesarJZO/C/main/readme.md")
-      .then((res) => res.text())
-      .then((data) => setContent(data));
+    fetch(`${articleUrl}/${title}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setContent(data.content);
+      });
   }, [])
 
   return (
