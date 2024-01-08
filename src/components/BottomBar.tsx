@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 import "./BottomBar.css";
 
@@ -20,7 +21,7 @@ function BottomBar({ links }: BottomBarProps) {
       <nav className="nav-links">
         {links.map((navItem, index, array) => (
           <Fragment key={navItem.name}>
-            <a href={navItem.path}>{navItem.name}</a>
+            <Link to={navItem.path}>{navItem.name}</Link>
             {index < array.length - 1 && <span> • </span>}
           </Fragment>
         ))}
