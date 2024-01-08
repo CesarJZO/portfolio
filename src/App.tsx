@@ -7,6 +7,7 @@ import BottomBar from "./components/BottomBar";
 
 import Landing from "./pages/Landing";
 import Blog from "./pages/Blog";
+import Article from "./pages/Article";
 
 const socialLinks = [
   {
@@ -38,12 +39,11 @@ function App() {
     <BrowserRouter>
       <TopBar socialLinks={socialLinks} />
 
-      <main>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:title" element={<Article />} />
+      </Routes>
 
       <BottomBar links={links} />
     </BrowserRouter>
