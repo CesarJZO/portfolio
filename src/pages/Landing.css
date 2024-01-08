@@ -1,0 +1,10 @@
+.profile-container {
+  align-self: center;
+
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+
+  width: auto;
+  max-width: none;
+}

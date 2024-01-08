@@ -1,5 +1,7 @@
 import ProfileCard from "../components/ProfileCard";
 
+import "./Landing.css";
+
 const roles = [
   {
     role: "Game Developer",
@@ -26,13 +28,13 @@ const roles = [
 
 const Landing = () => {
   return (
-    <>
+    <main className="profile-container">
       <ProfileCard
         name="César Zárate"
         picture="/images/pp-no-bg.png"
         roles={roles}
       />
-    </>
+    </main>
   );
 };
 
