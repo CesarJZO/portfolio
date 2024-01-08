@@ -43,11 +43,24 @@ const Form = () => {
         <fieldset>
           <legend>Create Article</legend>
 
-          <label htmlFor="title">Title</label>
-          <input type="text" id="title" name="title" />
+          <label>
+            Title
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="My super article"
+            />
+          </label>
 
-          <label htmlFor="content">Content</label>
-          <textarea id="content" name="content" />
+          <label>
+            Content
+            <textarea
+              id="content"
+              name="content"
+              placeholder="Write a great article"
+            />
+          </label>
         </fieldset>
 
         <button type="submit">Submit</button>
