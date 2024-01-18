@@ -1,8 +1,8 @@
 import axios from "axios";
-import { FormEvent } from "react";
+import { ChangeEvent, ChangeEventHandler, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { articleApiUrl } from "../utils/endpoints";
+import { articleApiUrl, imageApiUrl } from "../utils/endpoints";
 
 import "./Form.css";
 
@@ -32,13 +32,30 @@ const Form = () => {
     }
   };
 
+  const handleImageChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+
+    console.log(file);
+
+    const formData = new FormData();
+    formData.append("file", file as Blob);
+
+    const response = await axios.post(imageApiUrl, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+
+    console.log(response.data);
+  };
+
   return (
     <main>
       <form
         className="article-form"
         method="post"
         encType="multipart/form-data"
-        onSubmit={(e) => handleSubmit(e)}
+        onSubmit={handleSubmit}
       >
         <fieldset>
           <legend>Create Article</legend>
@@ -59,6 +76,20 @@ const Form = () => {
               id="content"
               name="content"
               placeholder="Write a great article"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Images</legend>
+
+          <label>
+            Add an image
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              onChange={handleImageChange}
             />
           </label>
         </fieldset>
